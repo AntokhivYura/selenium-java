@@ -7,25 +7,25 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 
-public class FirstTest {
-    public ChromeDriver chromeDriver;
+public class FirstTestFirefox {
+    public ChromeDriver driver;
 
 
     @BeforeEach
     void setUp() {
         WebDriverManager.chromedriver().setup();
-        chromeDriver = new ChromeDriver();
+        driver = new ChromeDriver();
 
     }
 
     @Test
     public void firstTest() {
-        chromeDriver.get("google.com");
+        driver.get("http://google.com");
     }
 
 
     @AfterEach
     void tearDown() {
-        chromeDriver.quit();
+        driver.quit();
     }
 }
