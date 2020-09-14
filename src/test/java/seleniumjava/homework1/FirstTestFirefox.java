@@ -1,21 +1,20 @@
-package seleniumjava;
+package seleniumjava.homework1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 
-public class FirstTestСhrome {
-    public ChromeDriver driver;
+public class FirstTestFirefox {
+    public FirefoxDriver driver;
 
 
     @BeforeEach
     void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-
+        WebDriverManager.firefoxdriver().setup();
+        driver = new FirefoxDriver();
     }
 
     @Test
